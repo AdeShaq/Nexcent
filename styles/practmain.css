@@ -13,3 +13,17 @@
     width: 100%;
 }
 
+.header img {
+    max-width: 100px;
+    height: auto;
+}
+
+.header ul, .header li a {
+    list-style: none;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
