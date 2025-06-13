@@ -27,3 +27,11 @@
     align-items: center;
     gap: 20px;
 }
+
+#ctaBtn {
+    background-color: rgb(13, 184, 13);
+    color: white ;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
