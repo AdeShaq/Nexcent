@@ -1,5 +1,1536 @@
-p {
-    color: blue;
-    font-size: 16px;
-    line-height: 1.5;
-}
+/* space between text and icon in navbar */
+
+ .horizontal span {
+
+   margin-left: 8px;
+
+ }
+
+ .horizontal {
+
+   display: flex;
+
+   justify-content: space-between;
+
+   font: 1em sans-serif;
+
+ }
+
+
+
+ #header {
+
+   position: fixed;
+
+   top: 0;
+   /* Ensures it's fixed at the top of the viewport */
+
+   left: 0;
+   /* Ensures it's fixed at the left of the viewport */
+
+   width: 100%;
+   /* Make it span the full width of the viewport */
+
+   display: flex;
+
+   justify-content: space-between;
+
+   align-items: center;
+
+   padding: 1px 24px;
+
+   border-radius: 10px;
+
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+   background-color: #ffffff;
+
+   box-sizing: border-box;
+   /* Ensures padding and border are included in the 100% width */
+
+   z-index: 1000;
+   /* Optional: ensures header stays on top of other content */
+
+ }
+
+
+
+ /* Style the navigation list itself */
+
+ #header nav ul {
+
+   display: flex;
+   /* Make the unordered list a flex container */
+
+   align-items: center;
+   /* Vertically centers list items if they have different heights */
+
+   gap: 20px;
+   /* Creates space between each list item */
+
+   list-style: none;
+   /* Removes default bullet points */
+
+   padding: 0;
+   /* Removes default padding from the ul */
+
+   margin: 0;
+   /* Removes default margin from the ul */
+
+ }
+
+
+
+ .navItems {
+
+   list-style-type: none;
+
+   margin: 0px;
+
+   padding: 20px;
+
+   text-decoration: none;
+
+ }
+
+
+
+ .navItems a {
+
+   color: black;
+
+   text-decoration: none;
+
+   padding: 10px;
+
+ }
+
+
+
+ #ctaBtn a {
+
+   background-color: rgb(13, 157, 73);
+
+   color: rgb(255, 255, 255);
+
+   padding: 10px 20px;
+
+   border-radius: 5px;
+
+   text-decoration: none;
+
+ }
+
+
+
+ /* Hero Section */
+
+ #home {
+
+   background-color: rgba(0, 0, 0, 0.06);
+
+   padding: 30px;
+
+   margin: 10px;
+
+   display: flex;
+
+   align-items: center;
+   /* Vertically centers the text content and the image */
+
+   justify-content: space-between;
+   /* Pushes the text content to the left and the image to the right */
+
+   padding: 50px 24px;
+   /* Overall padding for the section from the viewport edges */
+
+   flex-wrap: wrap;
+   /* Allows the content and image to stack on smaller screens */
+
+   gap: 60px;
+   /* Explicit space between the .hero-content div and the #imgOne div */
+
+ }
+
+
+
+
+
+ #home h2 {
+
+   font-size: 2em;
+
+   color: #333;
+
+   font-family: Arial, sans-serif;
+
+   font-weight: 790;
+
+   text-align: center;
+
+ }
+
+
+
+ #home p {
+
+   font-family: sans-serif;
+
+   font-size: 1.2em;
+
+   color: #666;
+
+   line-height: 1.6;
+
+   text-align: center;
+
+ }
+
+ /* hero button */
+
+ .btn2 {
+
+   padding-left: 3em;
+
+ }
+
+ /* hero image */
+
+ #imgOne {
+
+   width: 500px;
+
+ }
+
+ #imgOne img {
+
+   width: 100%;
+   /* Image will fill 100% of its parent container (#imgOne) */
+
+   height: auto;
+   /* Maintains the image's aspect ratio, preventing distortion */
+
+   max-width: 500px;
+   /* Optional: Prevents the image from becoming excessively large on wide screens */
+
+   display: block;
+   /* Removes any extra space below the image */
+
+ }
+
+ .hero-content {
+
+   justify-content: space-between;
+
+   align-content: center;
+
+   /* flex-grow: 1, flex-shrink: 1, flex-basis: 500px (preferred width) */
+
+   flex: 1 1 500px;
+
+   max-width: 600px;
+   /* Maximum width for the text content block */
+
+   min-width: 320px;
+   /* Minimum width to prevent text from becoming too narrow */
+
+   text-align: left;
+   /* Ensures text is left-aligned within its own container */
+
+ }
+
+
+
+ .hero-content h1 {
+
+   font-size: 3em;
+
+   padding-left: 1em;
+
+   font-family: 'Arial', sans-serif;
+
+   font-weight: 790;
+
+ }
+
+
+
+ .hero-content h6 {
+
+   font: 1em sans-serif;
+
+   font-size: 15px;
+
+   padding-left: 3em;
+
+   padding-bottom: 2em;
+
+ }
+
+
+
+ /* client section */
+
+ #client {
+
+   background-color: rgba(255, 255, 255, 0.83);
+
+   padding: 30px;
+
+   margin: 10px;
+
+ }
+
+
+
+ #client h2 {
+
+   font-size: 2em;
+
+   color: #333;
+
+   font-family: Arial, sans-serif;
+
+   font-weight: 790;
+
+   text-align: center;
+
+ }
+
+
+
+ #client p {
+
+   font-family: sans-serif;
+
+   font-size: 1.2em;
+
+   color: #666;
+
+   line-height: 1.6;
+
+   text-align: center;
+
+ }
+
+
+
+ #logo {
+
+   display: flex;
+
+   justify-content: center;
+
+ }
+
+
+
+ #logo img {
+
+   width: 150px;
+
+   height: 140px;
+
+   border-radius: 10px;
+
+   padding: 40px;
+
+ }
+
+
+
+ /* Community Section */
+
+ #community {
+
+   background-color: white;
+
+   padding: 30px;
+
+   margin: 10px;
+
+ }
+
+
+
+ #community h2 {
+
+   font-size: 2em;
+
+   color: #333;
+
+   font-family: Arial, sans-serif;
+
+   font-weight: 790;
+
+   text-align: center;
+
+ }
+
+
+
+ #community p {
+
+   font-family: sans-serif;
+
+   font-size: 1.2em;
+
+   color: #666;
+
+   line-height: 1.6;
+
+   text-align: center;
+
+ }
+
+
+
+ .parent-container {
+
+   display: flex;
+   /* Enables Flexbox for its direct children */
+
+   justify-content: space-around;
+   /* Distributes items evenly with space around them */
+
+   /* or justify-content: center; to center all cards together */
+
+   /* or justify-content: space-between; to put space between them but not at edges */
+
+   align-items: flex-start;
+   /* Aligns items to the start of the cross-axis (top) */
+
+   gap: 20px;
+   /* Optional: Adds space between the cards */
+
+ }
+
+
+
+ /* Optional: Basic styling for the cards themselves */
+
+ #card {
+
+   flex: 1;
+   /* Allows cards to grow and shrink, occupying equal space */
+
+   min-width: 280px;
+   /* Ensures cards don't get too small */
+
+   padding: 20px;
+
+   /* You mentioned no background, centered text, and icon at top: */
+
+   text-align: center;
+
+   /* For icon at top, ensure it's an img or svg block element or styled appropriately */
+
+ }
+
+
+
+ #card h3 {
+
+   font-family: Arial, Helvetica, sans-serif;
+
+   font-size: 1.5em;
+
+   font-weight: 790;
+
+   color: #333;
+
+ }
+
+
+
+ #card p {
+
+   font-family: Arial, Helvetica, sans-serif;
+
+   font-size: 1em;
+
+   color: #292929;
+
+   line-height: 1.5;
+
+ }
+
+
+
+ /* Pixelgrade Section */
+
+ .pixelgrade h2 {
+
+   font-family: Arial, Helvetica, sans-serif;
+
+   font-size: 38px;
+
+   margin-left: 100px;
+
+   font-weight: 700;
+
+ }
+
+ .pixelgrade {
+
+   display: flex;
+   /* Make this a flex container for the image and text */
+
+   flex-wrap: wrap;
+   /* Allows image and text to stack on smaller screens */
+
+   justify-content: center;
+   /* Centers image and text when they wrap */
+
+   align-items: center;
+   /* Vertically aligns image and text */
+
+   gap: 60px;
+   /* Space between the image block and the text block */
+
+   max-width: 1000px;
+   /* Limit the combined width of image and text */
+
+   width: 100%;
+   /* Ensure it takes full width of its parent (#pixel) up to max-width */
+
+ }
+
+ .pixelgrade a {
+
+   background-color: rgb(13, 157, 73);
+
+   color: rgb(255, 255, 255);
+
+   padding: 10px 20px;
+
+   border-radius: 5px;
+
+   text-decoration: none;
+
+   margin-left: 6.2em;
+
+ }
+
+
+
+ .pixelgrade1 img {
+
+   width: 400px;
+
+   height: 400px;
+
+ }
+
+
+
+ .pixelgrade2 p {
+
+   font-family: sans-serif;
+
+   font-size: 1em;
+
+   color: #333;
+
+   text-align: left;
+
+   margin-left: 100px;
+
+   margin-bottom: 2em;
+
+ }
+
+ /* Styling for the Text Block */
+
+ .pixelgrade2 {
+   /* New class for the text div */
+
+   flex: 1 1 500px;
+   /* flex-grow, flex-shrink, preferred base width */
+
+   max-width: 600px;
+   /* Max width for the text block */
+
+   min-width: 300px;
+   /* Min width to prevent text from crushing */
+
+   text-align: left;
+   /* Keep text left-aligned within its block */
+
+ }
+
+
+
+
+
+
+
+
+
+ /* Help Section /
+
+(Outer container - provides background/overall padding/max-width) PROVIDED BY GEMINI &
+
+MODIFIED BY ME */
+
+ #help {
+
+   background-color: #f5f7fa;
+
+   padding: 80px 24px;
+
+   /* Removed flex properties from here, they belong on .help-content now */
+
+ }
+
+
+
+ /* Main Layout Container: .help-content */
+
+ .help-content {
+
+   display: flex;
+   /* CRITICAL FIX: Make this the flex container */
+
+   align-items: center;
+   /* Vertically centers the text block and the image grid */
+
+   justify-content: space-around;
+   /* Distributes space around text block and image grid */
+
+   flex-wrap: wrap;
+   /* Allows text and image grid to stack on smaller screens */
+
+   gap: 60px;
+   /* Space between the text block and the image grid */
+
+
+
+   /* Optional: Limit the overall width of the content and center it */
+
+   max-width: 1200px;
+   /* Max width for the entire section's content */
+
+   margin: 0 auto;
+   /* Centers the .help-content block on the page */
+
+
+
+   /* Remove: justify-content: space-between; (from original .help-content block) - moved to display flex */
+
+   /* Remove: align-content: center; (from original .help-content block) - replaced by align-items */
+
+ }
+
+
+
+ /* Left-side text content (Target the div containing h3 and p) */
+
+ .help-content>div:first-child {
+
+   flex: 1 1 450px;
+   /* Allows it to grow/shrink, prefers 450px width */
+
+   max-width: 550px;
+   /* Limits its maximum width */
+
+   min-width: 300px;
+   /* Ensures text block doesn't get too narrow */
+
+   text-align: left;
+   /* Text remains left-aligned within its block */
+
+ }
+
+
+
+ /* Styling for the text elements */
+
+ .help-content h3 {
+
+   font-size: 2.5em;
+   /* Adjusted font size for heading */
+
+   color: #333;
+
+   font-family: 'Arial', sans-serif;
+
+   font-weight: 790;
+
+   line-height: 1.2;
+
+   padding-left: 2em;
+
+   margin-bottom: 10px;
+
+ }
+
+
+
+ .help-content h3 span {
+
+   color: green;
+   /* Ensures the green color is applied */
+
+ }
+
+
+
+ #help p {
+   /* Target the paragraph within #help */
+
+   font-family: sans-serif;
+
+   font-size: 1.1em;
+
+   color: #666;
+
+   line-height: 1.6;
+
+   padding-left: 4.5em;
+
+ }
+
+
+
+ /* Right-side Image Grid (Container for the four image items) */
+
+ .help-grid {
+
+   display: grid;
+   /* Use CSS Grid for the 2x2 layout of image items */
+
+   grid-template-columns: repeat(2, 1fr);
+   /* Two columns, each taking equal fraction of space */
+
+   gap: 30px;
+   /* Space between the individual grid items (images) */
+
+   flex: 1 1 500px;
+   /* Allows the entire grid block to grow/shrink, prefers 500px width */
+
+   max-width: 550px;
+   /* Limits its maximum width */
+
+   min-width: 300px;
+   /* Ensures the grid doesn't get too small */
+
+ }
+
+
+
+ /* Individual Grid Item (each div containing an image) */
+
+ .grid-item {
+
+   display: flex;
+   /* Make grid item a flex container to center the image */
+
+   justify-content: center;
+   /* Horizontally centers the image within its cell */
+
+   align-items: center;
+   /* Vertically centers the image within its cell */
+
+   padding: 0;
+
+   text-align: center;
+   /* Fallback for content alignment if any */
+
+ }
+
+
+
+ .grid-item img {
+
+   width: 410px;
+   /* CRITICAL FIX: Make the image (icon) size much smaller */
+
+   height: auto;
+   /* Maintain aspect ratio */
+
+   max-width: 100%;
+   /* Ensure image doesn't overflow its grid-item if it's too big */
+
+   display: block;
+   /* Removes extra space below the image */
+
+ }
+
+
+
+ /* Advertsection */
+
+ /* Pixelgrade Section */
+
+ .pixelgrade h2 {
+
+   font-family: Arial, Helvetica, sans-serif;
+
+   font-size: 38px;
+
+   margin-left: 100px;
+
+   font-weight: 700;
+
+ }
+
+ .pixelgrade {
+
+   display: flex;
+   /* Make this a flex container for the image and text */
+
+   flex-wrap: wrap;
+   /* Allows image and text to stack on smaller screens */
+
+   justify-content: center;
+   /* Centers image and text when they wrap */
+
+   align-items: center;
+   /* Vertically aligns image and text */
+
+   gap: 60px;
+   /* Space between the image block and the text block */
+
+   max-width: 1000px;
+   /* Limit the combined width of image and text */
+
+   width: 100%;
+   /* Ensure it takes full width of its parent (#pixel) up to max-width */
+
+ }
+
+ .pixelgrade a {
+
+   background-color: rgb(13, 157, 73);
+
+   color: rgb(255, 255, 255);
+
+   padding: 10px 20px;
+
+   border-radius: 5px;
+
+   text-decoration: none;
+
+   margin-left: 6.2em;
+
+ }
+
+
+
+ .pixelgrade1 img {
+
+   width: 400px;
+
+   height: 400px;
+
+ }
+
+
+
+ .pixelgrade2 p {
+
+   font-family: sans-serif;
+
+   font-size: 1em;
+
+   color: #333;
+
+   text-align: left;
+
+   margin-left: 100px;
+
+   margin-bottom: 2em;
+
+ }
+
+
+
+ /* Tesla Section */
+
+ /* Overall Section Styling */
+
+ #pixel {
+
+   background-color: hsl(55, 100%, 98%);
+   /* Light beige/yellow background for the entire section */
+
+   padding: 80px 24px;
+   /* Overall section padding */
+
+   display: flex;
+   /* Make #pixel a flex container */
+
+   flex-direction: column;
+   /* Stacks its direct children (main-content, hr, logoT) vertically */
+
+   align-items: center;
+   /* Centers the stacked blocks horizontally */
+
+   gap: 40px;
+   /* Space between the stacked blocks */
+
+ }
+
+
+
+ /* Wrapper for Image and Text Block (pixel-main-content) */
+
+ .pixel-main {
+
+   display: flex;
+   /* Make this a flex container for the image and text */
+
+   flex-wrap: wrap;
+   /* Allows image and text to stack on smaller screens */
+
+   justify-content: center;
+   /* Centers image and text when they wrap */
+
+   align-items: center;
+   /* Vertically aligns image and text */
+
+   gap: 60px;
+   /* Space between the image block and the text block */
+
+   max-width: 1000px;
+   /* Limit the combined width of image and text */
+
+   width: 100%;
+   /* Ensure it takes full width of its parent (#pixel) up to max-width */
+
+ }
+
+
+
+ /* Styling for the Tesla Image Block */
+
+ .pixel-img {
+   /* New class for the image div */
+
+   flex: 1 1 350px;
+   /* flex-grow, flex-shrink, preferred base width */
+
+   max-width: 400px;
+   /* Max width for the image block */
+
+   text-align: center;
+   /* Center the image within its div */
+
+ }
+
+
+
+ .pixel-img img {
+
+   width: 100%;
+   /* Image fills its container */
+
+   height: auto;
+   /* Maintains aspect ratio */
+
+   max-width: 400px;
+   /* Actual max size of the Tesla image */
+
+   display: block;
+   /* Removes extra space below image */
+
+   margin: 0 auto;
+   /* Centers the image within its div */
+
+ }
+
+
+
+ /* Styling for the Text Block */
+
+ .pixel-txt {
+   /* New class for the text div */
+
+   flex: 1 1 500px;
+   /* flex-grow, flex-shrink, preferred base width */
+
+   max-width: 600px;
+   /* Max width for the text block */
+
+   min-width: 300px;
+   /* Min width to prevent text from crushing */
+
+   text-align: left;
+   /* Keep text left-aligned within its block */
+
+ }
+
+
+
+ .pixel-txt p {
+
+   font-family: sans-serif;
+
+   font-size: 1.1em;
+   /* Adjusted font size */
+
+   color: #333;
+
+   line-height: 1.6;
+
+   margin-bottom: 1em;
+   /* Space below the main paragraph */
+
+ }
+
+
+
+ .pixel-txt h4 {
+
+   font-size: 1.2em;
+
+   margin-bottom: 5px;
+   /* Space below Tim Smith's name */
+
+ }
+
+
+
+ .pixel-txt h4 span {
+
+   color: green;
+
+   font-weight: 700;
+
+ }
+
+
+
+ #p2 {
+
+   font-size: 15px;
+
+   color: #666;
+
+   margin-top: 0;
+   /* Ensures no extra top margin */
+
+ }
+
+ /* Logos Section (#logoT) */
+
+ #logoT {
+
+   display: flex;
+   /* Make #logoT a flex container to arrange its logos horizontally */
+
+   flex-wrap: wrap;
+   /* Allow logos to wrap to the next line on smaller screens */
+
+   justify-content: center;
+   /* Horizontally center the group of logos and the link */
+
+   align-items: center;
+   /* Vertically align items */
+
+   flex-basis: 100%;
+   /* Forces the logo section to take full width and move to a new line */
+
+   gap: 30px;
+   /* Space between each logo and the "Meet all customers" link */
+
+   max-width: 1000px;
+   /* Limit the overall width of the logo row */
+
+   margin-top: 20px;
+   /* Add some space above the logo row */
+
+ }
+
+
+
+ #logoT img {
+
+   width: 80px;
+   /* CRITICAL FIX: Make the customer logos much smaller */
+
+   height: auto;
+   /* Maintains aspect ratio */
+
+   padding: 5px;
+   /* Add slight padding around logos if desired */
+
+   /* Remove border-radius and the large padding from your original #logoT img styles */
+
+   max-width: 100%;
+   /* Ensures logos don't overflow their grid cell on very small screens */
+
+ }
+
+ /* Styling for "Meet all customers" link */
+
+ .customer-link {
+
+   display: flex;
+   /* Make link a flex container to align text and arrow */
+
+   align-items: center;
+
+   gap: 5px;
+   /* Space between text and arrow */
+
+   color: green;
+   /* Text color */
+
+   text-decoration: none;
+   /* Remove underline */
+
+   font-weight: 600;
+
+   white-space: nowrap;
+   /* Prevents the link from breaking into multiple lines */
+
+ }
+
+
+
+ .customer-link:hover {
+
+   text-decoration: underline;
+
+ }
+
+
+
+ .arrow-icon {
+
+   font-size: 1.2em;
+   /* Adjust arrow size */
+
+ }
+
+ /* Marketing Section */
+
+ #marketing {
+
+   background-color: #f5f7fa;
+
+   padding: 80px 24px;
+
+ }
+
+ #marketing h2 {
+
+   font-size: 3em;
+
+   color: #333;
+
+   font-family: Arial, sans-serif;
+
+   font-weight: 790;
+
+   text-align: center;
+
+ }
+
+ #marketing p {
+
+   font-family: sans-serif;
+
+   font-size: 1.1em;
+
+   color: #666;
+
+   line-height: 1.6;
+
+   text-align: center;
+
+ }
+
+
+
+ /* used scope from card in Community section */
+
+ .images {
+
+   display: flex;
+   /* Enables Flexbox for its direct children */
+
+   justify-content: space-around;
+   /* Distributes items evenly with space around them */
+
+   /* or justify-content: center; to center all cards together */
+
+   /* or justify-content: space-between; to put space between them but not at edges */
+
+   align-items: flex-start;
+   /* Aligns items to the start of the cross-axis (top) */
+
+   gap: 20px;
+   /* Optional: Adds space between the cards */
+
+ }
+
+ #card-image {
+
+   flex: 1;
+   /* Allows cards to grow and shrink, occupying equal space */
+
+   min-width: 280px;
+   /* Ensures cards don't get too small */
+
+   padding: 20px;
+
+   /* You mentioned no background, centered text, and icon at top: */
+
+   text-align: center;
+
+   /* For icon at top, ensure it's an img or svg block element or styled appropriately */
+
+ }
+
+
+
+ /* Demo Section */
+
+ #demo {
+
+   background-color: #e2e2e2;
+
+   padding: 80px 24px;
+
+ }
+
+
+
+ #demo h1 {
+
+   font-size: 4em;
+
+   color: #333;
+
+   font-family: Arial, sans-serif;
+
+   font-weight: 790;
+
+   text-align: center;
+
+ }
+
+
+
+ #demo a {
+
+   display: inline-block;
+
+   padding: 15px 30px;
+
+   background-color: rgb(13, 157, 73);
+
+   color: #fff;
+
+   text-decoration: none;
+
+   border-radius: 5px;
+
+   font-size: 1.2em;
+
+   transition: background-color 0.3s ease;
+
+   margin-left: 25em;
+
+   margin-top: 2em;
+
+ }
+
+
+
+ #demo span {
+
+   margin-left: 8px;
+
+ }
+
+ /* Footer */
+
+ .site-footer {
+
+   background-color: #00050dfb;
+
+   color: rgb(16, 137, 0);
+
+   padding: 5rem 0 3rem;
+
+ }
+
+
+
+ .footer-logo {
+
+   display: flex;
+
+   align-items: center;
+
+   font-weight: 700;
+
+   font-size: 1.5rem;
+
+   color: var(--white);
+
+   margin-bottom: 1.5rem;
+
+ }
+
+
+
+ .copyright {
+
+   color: rgba(255, 255, 255, 0.7);
+
+   margin-bottom: 1.5rem;
+
+ }
+
+
+
+ .social-icons {
+
+   display: flex;
+
+   gap: 1rem;
+
+   margin-bottom: 2rem;
+
+ }
+
+
+
+ .social-icons a {
+
+   color: var(--white);
+
+   font-size: 1.2rem;
+
+   transition: all 0.3s ease;
+
+ }
+
+
+
+ .social-icons a:hover {
+
+   color: var(--primary-color);
+
+ }
+
+
+
+ .footer-links h4 {
+
+   color: var(--white);
+
+   margin-bottom: 1.5rem;
+
+ }
+
+
+
+ .footer-links ul {
+
+   list-style: none;
+
+   padding: 0;
+
+ }
+
+
+
+ .footer-links li {
+
+   margin-bottom: 0.8rem;
+
+ }
+
+
+
+ .footer-links a {
+
+   color: rgba(255, 255, 255, 0.7);
+
+   text-decoration: none;
+
+   transition: all 0.3s ease;
+
+ }
+
+
+
+ .footer-links a:hover {
+
+   color: var(--primary-color);
+
+ }
+
+
+
+ .newsletter {
+
+   display: flex;
+
+   margin-top: 1.5rem;
+
+ }
+
+
+
+ .newsletter input {
+
+   flex: 1;
+
+   padding: 0.5rem 1rem;
+
+   border: none;
+
+   border-radius: var(--border-radius) 0 0 var(--border-radius);
+
+ }
+
+
+
+ .newsletter button {
+
+   border-radius: 0 var(--border-radius) var(--border-radius) 0;
+
+   color: #ffffff;
+
+   background-color: rgb(29, 168, 24);
+
+ }
+
+
+
+ .newsletter button:hover {
+
+   background-color: rgb(13, 157, 73);
+
+ }
+
+
+
+ /* Responsive Styles */
+
+ @media (max-width: 992px) {
+
+   .hero-section h1 {
+
+     font-size: 2.5rem;
+
+   }
+
+
+
+   .hero-image,
+
+   .pixelgrade-image,
+
+   .footer-design-image {
+
+     margin-top: 3rem;
+
+   }
+
+
+
+   .statistics-section .col-lg-5 {
+
+     margin-bottom: 3rem;
+
+   }
+
+ }
+
+
+
+ @media (max-width: 768px) {
+
+   section {
+
+     padding: 3rem 0;
+
+   }
+
+
+
+   .hero-section h1 {
+
+     font-size: 2rem;
+
+   }
+
+
+
+   .feature-card {
+
+     margin-bottom: 2rem;
+
+   }
+
+
+
+   .testimonial-card {
+
+     margin-bottom: 2rem;
+
+   }
+
+
+
+   .footer-links {
+
+     margin-bottom: 2rem;
+
+   }
+
+ }
+
+
+
+ @media (max-width: 576px) {
+
+   .hero-section h1 {
+
+     font-size: 1.8rem;
+
+   }
+
+
+
+   .cta-section h2 {
+
+     font-size: 1.8rem;
+
+   }
+
+
+
+   .newsletter {
+
+     flex-direction: column;
+
+   }
+
+
+
+   .newsletter input {
+
+     border-radius: var(--border-radius);
+
+     margin-bottom: 1rem;
+
+   }
+
+
+
+   .newsletter button {
+
+     border-radius: var(--border-radius);
+
+   }
+
+ }

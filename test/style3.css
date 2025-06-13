@@ -1,0 +1,1049 @@
+/* General Body and HTML Reset */
+body {
+    font-family: 'Inter', sans-serif; /* Using Inter for consistent typography */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Global box-sizing for easier layout calculations */
+    overflow-x: hidden; /* Prevent horizontal scrollbar due to overflow */
+}
+
+/* Base Paragraph Styling */
+p {
+    color: #666; /* Consistent dark gray for paragraphs */
+    font-size: 1rem; /* Base font size, responsive units */
+    line-height: 1.6;
+    margin: 10px 0; /* Default margin for paragraphs */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif; /* Consistent heading font */
+    color: #333; /* Consistent dark gray for headings */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+/* Utility Classes */
+.text-green {
+    color: rgb(13, 157, 73); /* Consistent green color for highlights */
+}
+
+.btn-primary {
+    display: inline-flex; /* Use flex for button text and icon alignment */
+    align-items: center;
+    gap: 8px; /* Space between text and icon */
+    background-color: rgb(13, 157, 73);
+    color: rgb(255, 255, 255) !important; /* !important to override Bootstrap if necessary */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none !important; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: rgb(10, 130, 60);
+}
+
+.arrow-icon {
+    color: rgb(255, 255, 255); /* Ensure arrow icon is white */
+    font-size: 1em; /* Adjust arrow size relative to parent text */
+}
+
+.content-block {
+    padding: 60px 24px; /* Standard vertical padding for main sections */
+    max-width: 1200px; /* Max width for content within sections */
+    margin: 0 auto; /* Center sections on larger screens */
+    box-sizing: border-box; /* Include padding in element's total width/height */
+}
+
+/* Header Section */
+#main-header { /* Using the new ID from refined HTML */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 24px; /* More consistent padding */
+    border-radius: 0; /* Removed border-radius as it's a full-width header */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #ffffff;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.header-logo img { /* Targeting the logo image */
+    height: 30px; /* Adjust logo size */
+    width: auto;
+}
+
+.main-nav .nav-list { /* Targeting the nav list */
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Increased gap for better spacing */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav .nav-item a { /* Styling for regular nav links */
+    color: #333;
+    text-decoration: none;
+    padding: 5px 0; /* Reduced padding here, links are within li's */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav .nav-item a:hover {
+    color: rgb(13, 157, 73);
+}
+
+.nav-item-button .btn-register { /* Styling for the Register Now button-like link */
+    /* All styles now handled by .btn-primary utility class */
+}
+
+/* Mobile Menu Toggle (initially hidden) */
+.menu-toggle {
+    display: none; /* Hide on desktop */
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+    z-index: 1001;
+}
+
+/* Hero Section */
+#hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 100px; /* Space for fixed header */
+    padding-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 40px; /* Space between content and image */
+    background-color: #f8f8f8; /* A subtle background for the section */
+}
+
+.hero-content {
+    flex: 1 1 450px; /* Flexible width for content block */
+    max-width: 600px;
+    min-width: 300px;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem; /* Larger heading */
+    margin-bottom: 15px;
+}
+
+.hero-content h6 {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.hero-cta-wrapper .btn-primary {
+    /* Styles inherited from .btn-primary */
+}
+
+.hero-image-wrapper {
+    flex: 1 1 450px; /* Flexible width for image wrapper */
+    max-width: 550px;
+    min-width: 300px;
+    display: flex; /* Use flex to center image within its wrapper */
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Limit image max size */
+    display: block;
+}
+
+/* Client Section */
+#client-section {
+    text-align: center;
+    padding: 60px 24px;
+    background-color: #ffffff;
+}
+
+.client-heading h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.client-heading p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.client-logos-container {
+    display: flex;
+    justify-content: center; /* Center the logos */
+    flex-wrap: wrap; /* Allow logos to wrap */
+    gap: 40px; /* Space between logos */
+    padding: 20px 0;
+}
+
+.client-logos-container img {
+    width: 100px; /* Fixed width for logos */
+    height: auto;
+    max-width: 150px; /* Max width to prevent stretching */
+    filter: grayscale(100%); /* Optional: Grayscale effect */
+    opacity: 0.7; /* Optional: Slight opacity */
+    transition: all 0.3s ease;
+}
+
+.client-logos-container img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Community Section */
+#community-section {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 60px 24px;
+}
+
+#community-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#community-section p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.cards-grid-container {
+    display: flex; /* Use flexbox for cards */
+    justify-content: center; /* Center cards horizontally */
+    flex-wrap: wrap; /* Allow cards to wrap */
+    gap: 30px; /* Space between cards */
+    padding: 20px 0;
+}
+
+.community-card {
+    flex: 1 1 300px; /* Flexible basis for cards */
+    max-width: 350px;
+    min-width: 280px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    display: flex; /* Flexbox within card for icon/text stacking */
+    flex-direction: column;
+    align-items: center;
+}
+
+.community-card img {
+    width: 60px; /* Icon size */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.community-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.community-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Design Section & Advert Section (Similar structure) */
+#design-section,
+#advert-section {
+    background-color: #ffffff;
+    padding: 60px 24px;
+}
+
+.design-content-wrapper,
+.advert-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center content */
+    align-items: center;
+    gap: 50px; /* Space between image and text */
+    max-width: 1000px; /* Limit total width */
+    margin: 0 auto; /* Center the wrapper */
+}
+
+.design-image-wrapper,
+.advert-image-wrapper {
+    flex: 1 1 400px; /* Flexible width for image */
+    max-width: 450px;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.design-image-wrapper img,
+.advert-image-wrapper img {
+    width: 100%;
+    height: auto;
+    max-width: 450px; /* Max size of the image */
+    display: block;
+}
+
+.design-text-content,
+.advert-text-content {
+    flex: 1 1 500px; /* Flexible width for text content */
+    max-width: 600px;
+    min-width: 300px;
+    text-align: left;
+}
+
+.design-text-content h2,
+.advert-text-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.design-text-content p,
+.advert-text-content p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.design-text-content .btn-learn-more,
+.advert-text-content .btn-learn-more {
+    /* Styles inherited from .btn-primary */
+    font-size: 0.95rem;
+}
+
+/* Help Section */
+#help-section {
+    background-color: #f5f7fa;
+    padding: 60px 24px;
+    text-align: center; /* Default center align for section heading/paragraph */
+}
+
+.help-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 60px;
+    max-width: 1100px; /* Slightly smaller max width for this section */
+    margin: 0 auto;
+}
+
+.help-text-content {
+    flex: 1 1 400px;
+    max-width: 500px;
+    min-width: 280px;
+    text-align: left; /* Text remains left-aligned within its block */
+}
+
+.help-text-content h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.help-text-content p {
+    font-size: 1rem;
+}
+
+.help-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns, each taking equal fraction */
+    gap: 30px;
+    flex: 1 1 450px; /* Flexible width for the grid container */
+    max-width: 500px;
+    min-width: 280px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center icons and text */
+    text-align: center;
+    padding: 15px; /* Padding for each stat item */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.stat-item img {
+    width: 60px; /* Icon size */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Tesla Section */
+#tesla-section {
+    background-color: hsl(55, 100%, 98%); /* Light beige/yellow background */
+    padding: 60px 24px;
+    display: flex;
+    flex-direction: column; /* Stack main content, hr, and logos vertically */
+    align-items: center;
+    gap: 40px;
+}
+
+.tesla-main-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tesla-image-wrapper {
+    flex: 1 1 350px;
+    max-width: 400px;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tesla-image-wrapper img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    display: block;
+}
+
+.tesla-text-content {
+    flex: 1 1 500px;
+    max-width: 600px;
+    min-width: 300px;
+    text-align: left;
+}
+
+.tesla-text-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.tesla-text-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.author-association { /* Class for the association text */
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 0;
+}
+
+.section-divider { /* Class for the HR */
+    flex-basis: 100%;
+    height: 1px;
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+    width: 80%;
+    max-width: 900px;
+}
+
+.customer-logos-section { /* New class for the logo group */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    gap: 30px;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+.customer-logos-section img {
+    width: 80px; /* Small logos */
+    height: auto;
+    padding: 5px;
+    max-width: 100%;
+}
+
+.customer-link {
+    /* Styles inherited from .btn-primary structure or explicitly defined here */
+    color: rgb(13, 157, 73); /* Green text for the link */
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.customer-link:hover {
+    text-decoration: underline;
+}
+
+/* Marketing Section */
+#marketing-section {
+    background-color: #f8f8f8;
+    padding: 60px 24px;
+    text-align: center;
+}
+
+.marketing-inner-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.marketing-inner-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.marketing-inner-content p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+.marketing-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.marketing-card-item {
+    flex: 1 1 300px; /* Flexible basis for cards */
+    max-width: 350px;
+    min-width: 280px;
+    height: auto; /* Images will define height */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Ensures image corners are rounded if card has border-radius */
+}
+
+.marketing-card-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Demo Section */
+#demo-section {
+    background-color: #f5f7fa; /* Light background for consistency */
+    padding: 60px 24px;
+    text-align: center;
+}
+
+.demo-content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Space between heading and button */
+}
+
+.demo-content-wrapper h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 0; /* Gap handles spacing */
+}
+
+.demo-content-wrapper .btn-demo {
+    /* Styles inherited from .btn-primary */
+    padding: 15px 30px; /* Larger button */
+    font-size: 1.2rem;
+    margin-left: 0; /* Remove fixed margin-left */
+    margin-top: 0; /* Remove fixed margin-top */
+}
+
+/* Footer Section */
+.site-footer {
+    background-color: #263238; /* Dark background */
+    color: #f0f0f0; /* Light text color */
+    padding: 60px 24px;
+}
+
+.site-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap */
+    justify-content: space-between; /* Space out columns */
+    gap: 30px; /* Space between columns */
+}
+
+.footer-col {
+    flex: 1 1 250px; /* Flexible basis for columns */
+    min-width: 200px;
+}
+
+.footer-logo img {
+    height: 40px; /* Adjust footer logo size */
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.copyright-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+.social-icons-container {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-container a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons-container a:hover {
+    color: rgb(13, 157, 73);
+}
+
+.footer-links-col h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.footer-links-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-col li {
+    margin-bottom: 10px;
+}
+
+.footer-links-col a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links-col a:hover {
+    color: rgb(13, 157, 73);
+}
+
+.newsletter-col {
+    flex: 1 1 300px; /* Flexible basis for newsletter column */
+    min-width: 250px;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-form .newsletter-btn {
+    border-radius: 0 5px 5px 0;
+    color: #ffffff;
+    background-color: rgb(13, 157, 73);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form .newsletter-btn:hover {
+    background-color: rgb(10, 130, 60);
+}
+
+
+/* Media Queries for overall responsiveness */
+
+/* Tablet and smaller desktops */
+@media (max-width: 992px) {
+    /* Header */
+    #main-header {
+        padding: 15px 20px;
+    }
+    .main-nav .nav-list {
+        gap: 20px;
+    }
+
+    /* Hero Section */
+    #hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 90px;
+    }
+    .hero-content,
+    .hero-image-wrapper {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 500px; /* Limit content width when stacked */
+        margin: 0 auto;
+    }
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    .hero-content h6 {
+        font-size: 1rem;
+    }
+
+    /* Client Section */
+    .client-logos-container {
+        gap: 30px;
+    }
+
+    /* Community Section */
+    .cards-grid-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+    }
+    .community-card {
+        max-width: 400px; /* Limit card width when stacked */
+    }
+
+    /* Design & Advert Sections */
+    .design-content-wrapper,
+    .advert-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .design-text-content,
+    .advert-text-content {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 500px; /* Limit text width when stacked */
+        margin: 0 auto;
+    }
+    .design-text-content h2,
+    .advert-text-content h2 {
+        font-size: 1.8rem;
+    }
+    .design-text-content .btn-learn-more,
+    .advert-text-content .btn-learn-more {
+        margin: 0 auto; /* Center button when text is centered */
+    }
+
+    /* Help Section */
+    .help-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .help-text-content,
+    .help-stats-grid {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .help-text-content h3 {
+        font-size: 2rem;
+        padding-left: 0; /* Remove fixed padding */
+    }
+    #help-section p { /* Specific target for help section paragraph */
+        padding-left: 0; /* Remove fixed padding */
+    }
+    .help-stats-grid {
+        grid-template-columns: 1fr; /* Stack stats in a single column */
+    }
+    .stat-item {
+        align-items: center; /* Center content within stacked stat items */
+    }
+
+    /* Tesla Section */
+    .tesla-main-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .tesla-image-wrapper,
+    .tesla-text-content {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .tesla-text-content {
+        text-align: center;
+    }
+    .customer-logos-section {
+        gap: 20px;
+    }
+    .customer-logos-section img {
+        width: 70px;
+    }
+
+    /* Marketing Section */
+    .marketing-cards-container {
+        flex-direction: column; /* Stack marketing cards */
+        align-items: center;
+    }
+    .marketing-card-item {
+        max-width: 400px; /* Limit card width */
+    }
+
+    /* Demo Section */
+    .demo-content-wrapper h1 {
+        font-size: 2.5rem;
+    }
+    .demo-content-wrapper .btn-demo {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    /* Footer */
+    .site-footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-col,
+    .footer-links-col,
+    .newsletter-col {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 400px; /* Limit width of footer columns when stacked */
+        margin-bottom: 30px;
+    }
+    .footer-links-col ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-icons-container {
+        justify-content: center;
+    }
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .newsletter-form input,
+    .newsletter-form .newsletter-btn {
+        width: 100%;
+        border-radius: 5px; /* Full radius for single items */
+        margin-bottom: 10px; /* Space between input and button */
+    }
+}
+
+/* Mobile (max-width: 767px covers smaller tablets and phones) */
+@media (max-width: 767px) {
+    /* Header */
+    #main-header {
+        padding: 10px 15px;
+    }
+    .main-nav .nav-list {
+        display: none; /* Hide main nav by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Below the header */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        transition: all 0.3s ease-in-out;
+    }
+    .main-nav .nav-list.active {
+        display: flex; /* Show nav when active */
+    }
+    .menu-toggle {
+        display: block; /* Show hamburger menu */
+    }
+    .main-nav .nav-item {
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .main-nav .nav-item-button {
+        margin-top: 10px;
+    }
+    .main-nav .nav-item a {
+        padding: 10px;
+    }
+
+    /* General Section Padding */
+    .content-block {
+        padding: 40px 15px;
+    }
+
+    /* Headings & Text */
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.5rem; }
+    p { font-size: 0.95rem; }
+
+    /* Hero Section */
+    #hero-section {
+        padding-top: 80px; /* Adjust for smaller header */
+        gap: 30px;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Client Section */
+    .client-logos-container {
+        gap: 20px;
+    }
+    .client-logos-container img {
+        width: 80px;
+    }
+
+    /* Community Section */
+    .community-card {
+        min-width: unset; /* Allow cards to shrink more */
+        width: 90%; /* Take up most of the screen width */
+    }
+
+    /* Design & Advert Sections */
+    .design-content-wrapper,
+    .advert-content-wrapper {
+        gap: 30px;
+    }
+    .design-image-wrapper img,
+    .advert-image-wrapper img {
+        max-width: 300px;
+    }
+    .design-text-content h2,
+    .advert-text-content h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Help Section */
+    .help-stats-grid {
+        gap: 20px;
+    }
+    .stat-item img {
+        width: 50px;
+    }
+
+    /* Tesla Section */
+    .tesla-main-content-wrapper {
+        gap: 30px;
+    }
+    .tesla-image-wrapper img {
+        max-width: 300px;
+    }
+    .tesla-text-content p {
+        font-size: 0.95rem;
+    }
+    .customer-logos-section {
+        gap: 15px;
+    }
+    .customer-logos-section img {
+        width: 60px;
+    }
+    .customer-link {
+        font-size: 0.9rem;
+    }
+
+    /* Marketing Section */
+    .marketing-cards-container {
+        gap: 20px;
+    }
+    .marketing-inner-content h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Demo Section */
+    .demo-content-wrapper h1 {
+        font-size: 2rem;
+    }
+    .demo-content-wrapper .btn-demo {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .site-footer {
+        padding: 40px 15px;
+    }
+    .footer-col,
+    .footer-links-col,
+    .newsletter-col {
+        margin-bottom: 20px;
+    }
+    .footer-links-col h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Very Small Screens (e.g., small phones in landscape) */
+@media (max-width: 480px) {
+    .content-block {
+        padding: 30px 10px;
+    }
+
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.3rem; }
+
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .hero-image-wrapper img {
+        max-width: 250px;
+    }
+
+    /* Client Logos */
+    .client-logos-container img {
+        width: 60px;
+    }
+
+    /* Community Cards */
+    .community-card {
+        padding: 20px;
+    }
+
+    /* Design & Advert Images */
+    .design-image-wrapper img,
+    .advert-image-wrapper img {
+        max-width: 250px;
+    }
+
+    /* Help Section */
+    .help-stats-grid {
+        gap: 15px;
+    }
+
+    /* Tesla Section */
+    .tesla-image-wrapper img {
+        max-width: 250px;
+    }
+    .customer-logos-section img {
+        width: 50px;
+    }
+    .customer-link {
+        font-size: 0.8rem;
+    }
+
+    /* Marketing Section */
+    .marketing-card-item {
+        width: 95%; /* Make cards almost full width */
+    }
+
+    /* Demo Section */
+    .demo-content-wrapper h1 {
+        font-size: 1.6rem;
+    }
+    .demo-content-wrapper .btn-demo {
+        padding: 8px 15px;
+    }
+}
