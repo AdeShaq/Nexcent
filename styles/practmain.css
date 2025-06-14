@@ -20,6 +20,8 @@
 }
 
 .header ul, .header li a {
+    display: flex;
+    flex-wrap: wrap; /*added this and the display prop above this line so the nav folds when shrinked instead of going to the left and remaining content is unseen*/
     list-style: none;
     margin: 0 15px;
     text-decoration: none;
@@ -27,7 +29,14 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    transition: all 0.3s ease;
 }
+
+.header ul, .header li a:hover {
+    color: rgb(13, 184, 13);   /*just added this along with the transition prop above to add that effect yg!*/
+}
+
+
 
 #ctaBtn {
     background-color: rgb(13, 184, 13);
@@ -57,6 +66,7 @@
 
 .hero img {
     max-width: 40%;
+    min-width: 40%; /* Ensures the image doesn't shrink too small */
     height: auto;
     flex: 0 1 50%;
     margin-right: 20px;
@@ -67,7 +77,6 @@
 .hero   h1 {
     font-size: 4em;
     margin-bottom: 20px;
-    flex: auto;
     font-weight: 650;
 }
 
@@ -178,3 +187,49 @@
 /*//////////////////////////////*/
 
 /* Pixelgrade Section */
+/* You see this Pixelgrade section, I used the scope from the hero section and just reversed it since they a very similar */
+.pixelgrade {
+    background-color: #ffffff;
+    padding: 80px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.pixelgrade img {
+    max-width: 40%;
+    min-width: 40%; /* Ensures the image doesn't shrink too small */
+    height: auto;
+    flex: 0 1 50%;
+    margin-right: 90px;
+    margin-left: 20px;
+    margin-top: 3em;
+}
+
+.pixelgrade h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.pixelgrade p {
+    margin-right: 80px;
+    margin-top: 1.5em; /*space between this and the h2 section*/
+    margin-bottom: 2em; /*I added this here to add the space btween this and the button because the prop wasn't working in the button section*/
+}
+
+.pixelgrade a {
+    background-color: rgb(13, 184, 13);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.pixelgrade a:hover {
+    background-color: rgb(10, 150, 10);
+} 
+
+/*//////////////////////////////*/
