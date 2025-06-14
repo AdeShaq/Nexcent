@@ -86,14 +86,37 @@
 .hero a:hover {
     background-color: rgb(10, 150, 10);
 }
+
 /*//////////////////////////////*/
 
 /* Client Section */
 .client {
-       background-color: #f8f9fa;
+    background-color: #ffffff; /*client border section/container*/
     padding: 80px 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
 }
+
+.client h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.client p {
+    text-align: center;
+}
+/* i had to seperate these props from the id because it was not reflecting */
+.client img {
+    width: 80px;
+    height: 80%;
+}
+
+#logos {
+    display: flex; /*allows the images to be laid out straight in horizontal format*/
+    justify-content: center; /*allows the images to be in the center of their section*/
+    gap: 80px;
+    flex-wrap: wrap ;    /*causes the images to be wrapped within the flex container not going beyond the client section*/
+}
+
+/*//////////////////////////////*/
+
+/*  */
