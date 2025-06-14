@@ -88,3 +88,12 @@
 }
 /*//////////////////////////////*/
 
+/* Client Section */
+.client {
+       background-color: #f8f9fa;
+    padding: 80px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
