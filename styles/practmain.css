@@ -42,3 +42,49 @@
 }
 
 /*//////////////////////////////*/
+
+/* Hero Section */
+.hero {
+    background-color: #f8f9fa;
+    padding: 80px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-top: 3em;
+}
+
+.hero img {
+    max-width: 40%;
+    height: auto;
+    flex: 0 1 50%;
+    margin-right: 20px;
+    margin-left: auto;
+    margin-top: 3em;
+}
+
+.hero   h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    flex: auto;
+    font-weight: 650;
+}
+
+.hero p {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.hero a {
+    background-color: rgb(13, 184, 13);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero a:hover {
+    background-color: rgb(10, 150, 10);
+}
+/*//////////////////////////////*/
+
