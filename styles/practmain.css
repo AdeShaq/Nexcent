@@ -119,4 +119,62 @@
 
 /*//////////////////////////////*/
 
-/*  */
+/* Community Section */
+.community {
+    background-color: #ffffff; 
+    padding: 80px 70px;
+}
+
+ .community h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+ }
+
+ .community p {
+    text-align: center;
+ }
+
+ #pCard {
+    align-content: flex-start;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+ }
+
+ #cards {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    height: 300px;
+    opacity: 25%;  /*the visibility of the card*/
+    transition: all 0.3s ease; /*causes the transition between the card and the hover action*/
+ }
+
+ #cards:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.187); /**/
+    filter: grayscale(0); /*this is what makes the card look very dull*/
+    opacity: 1; /*this works hand in hand with the filter, 1 - visible, 0 - invisible, dont use 0*/
+ }
+
+ #cards img {
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+ }
+
+ #cards p {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+ }
+
+/*//////////////////////////////*/
+
+/* Pixelgrade Section */
