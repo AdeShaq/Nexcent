@@ -319,4 +319,71 @@
 
 /*//////////////////////////////*/
 
-/*  */
+/* Tesla Section */
+.tesla {
+    background-color: rgba(128, 128, 128, 0.178);
+    padding: 80px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.tesla img {
+    max-width: 40%;
+    min-width: 40%; /* Ensures the image doesn't shrink too small */
+    height: auto;
+    flex: 0 1 50%;
+    margin-right: 90px;
+    margin-left: 20px;
+    margin-top: 3em;
+}
+
+.tesla h4 {
+    font-size: 30px;
+    font-weight: 500;
+    color: green;
+}
+
+.tesla h6 {
+    font-size: 15px;
+    color: #33333390;
+}
+
+.tesla p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#teslaImg a {
+    color: green;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    margin-top: 45px;
+    margin-left: 30px;
+}
+
+#teslaImg i {
+    color: green;
+    margin-left: 0.5em;
+    transition: all 0.3s ease;;
+}
+
+#teslaImg i, a:hover {
+    transform: translateY(-4px);
+}
+
+#teslaImg {
+    display: flex;
+    flex: 1 1 10px;
+    flex-wrap: wrap;
+}
+
+#teslaImg img {
+margin-left: 10px; /*just foralignmet purpose*/
+margin-right: 20px; /*I added this here because the margin of the img prop in the class was affecting this id one, it being specified overrules the class own*/
+ max-width: 30px;
+ min-width: 20px;
+}
