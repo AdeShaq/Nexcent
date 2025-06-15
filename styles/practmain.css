@@ -160,6 +160,7 @@
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     text-align: center;
+    /* this part below is copied to '#m img id' section */
     flex: 1;
     min-width: 280px;
     max-width: 400px;
@@ -172,7 +173,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.187); /**/
     filter: grayscale(0); /*this is what makes the card look very dull*/
     opacity: 1; /*this works hand in hand with the filter, 1 - visible, 0 - invisible, dont use 0*/
-      transform: translateY(-2px);
+    transform: translateY(-2px);
  }
 
  #cards img {
@@ -391,7 +392,44 @@ margin-right: 20px; /*I added this here because the margin of the img prop in th
 /*//////////////////////////////*/
 
 /* Marketing Section */
+.marketing {
+    background-color: #26323800;
+    padding: 80px 70px;
+}
 
+.marketing h2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.marketing p {
+    text-align: center;
+}
+
+#mCards {  /*This format was copied from the 'pCards id' section above*/
+    align-content: flex-start;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#m img {  /*copied from '#cards id' section*/
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    height: 300px;
+    opacity: 25%;  /*the visibility of the card*/
+    transition: all 0.3s ease; /*causes the transition between the card and the hover action*/
+}
+
+#m img:hover {  /*copied from '#cards:hover id' section */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.187); */ --- this part wasnt necessary since it's just an image not a card with texts, backgrounds and stuff/
+    filter: grayscale(0); /*this is what makes the card look very dull*/
+    opacity: 1; /*this works hand in hand with the filter, 1 - visible, 0 - invisible, dont use 0*/
+    transform: translateY(-2px);
+}
 
 /*//////////////////////////////*/
 
@@ -408,7 +446,8 @@ margin-right: 20px; /*I added this here because the margin of the img prop in th
 }
 
 .extra a { /*apparently I cant add space between the text and arrow icon from here*/
-    margin-left: 30em;
+margin-left: 35em;
+margin-right: 22em;
     background-color: rgb(13, 184, 13);
     color: white ;
     padding: 10px 20px;
@@ -424,7 +463,6 @@ margin-right: 20px; /*I added this here because the margin of the img prop in th
 .extra a:hover {
         background-color: rgb(10, 150, 10);
 }
-
 
 /*//////////////////////////////*/
 
