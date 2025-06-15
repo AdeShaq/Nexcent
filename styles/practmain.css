@@ -28,7 +28,7 @@
     color: #333;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 20px; /*space between the text and the arrow icon*/
     transition: all 0.3s ease;
 }
 
@@ -396,6 +396,34 @@ margin-right: 20px; /*I added this here because the margin of the img prop in th
 /*//////////////////////////////*/
 
 /* Extra Section */
+.extra {
+    background-color: rgba(128, 128, 128, 0.295);
+    padding: 80px 70px;
+}
+
+.extra p {
+    font-size: 60px;
+    text-align: center;
+    font-weight:700
+}
+
+.extra a { /*apparently I cant add space between the text and arrow icon from here*/
+    margin-left: 30em;
+    background-color: rgb(13, 184, 13);
+    color: white ;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.extra span { /*but i was finally able to do that here, i mistaked span for i but made adjustments*/
+    margin-left: 1em;
+}
+
+.extra a:hover {
+        background-color: rgb(10, 150, 10);
+}
 
 
 /*//////////////////////////////*/
