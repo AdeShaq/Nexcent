@@ -49,6 +49,7 @@
 
 #ctaBtn:hover {
     background-color: rgb(10, 150, 10);
+      transform: translateY(-2px);
 }
 
 /*//////////////////////////////*/
@@ -96,6 +97,7 @@
 
 .hero a:hover {
     background-color: rgb(10, 150, 10);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /*//////////////////////////////*/
@@ -170,6 +172,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.187); /**/
     filter: grayscale(0); /*this is what makes the card look very dull*/
     opacity: 1; /*this works hand in hand with the filter, 1 - visible, 0 - invisible, dont use 0*/
+      transform: translateY(-2px);
  }
 
  #cards img {
@@ -233,3 +236,42 @@
 } 
 
 /*//////////////////////////////*/
+
+/* Help Section */
+/* Used scop from Hero section */
+.help {
+    display: flex;
+    background-color: #e4e4e47d;
+    padding: 80px 70px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.help h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.help p {
+    margin-bottom: 2em; /*I added this here to add the space btween this and the button because the prop wasn't working in the button section*/
+}
+
+#imgs {
+    display: grid; /*any where you see grid is part of what makes it fold into 4*/
+    justify-content: space-around;
+    gap: 80px;
+    grid-template-columns: repeat(2, 1fr); /*mainly this part*/
+}
+
+#imgs img {
+    flex: 1 1 300px;
+    max-width: 300px;
+    min-width: 10px;
+}
+
+/*//////////////////////////////*/
+
+/* Design Section */
